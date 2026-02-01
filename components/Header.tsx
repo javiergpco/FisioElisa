@@ -16,10 +16,15 @@ export const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'Servicios', href: '#servicios' },
-    { name: 'Tecnologías', href: '#servicios' },
     { name: 'Tarifas', href: '#tarifas' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: 'Tecnologías', href: '#tecnologias' },
+    { name: 'Sobre FisioElisa', href: '#sobre-nosotros' },
   ];
+
+  // Lógica de colores dinámica
+  const textColorClass = isScrolled ? 'text-brand-text' : 'text-white';
+  const hoverColorClass = isScrolled ? 'hover:text-brand-primary' : 'hover:text-brand-accent';
+  const logoFilterClass = isScrolled ? '' : 'brightness-0 invert'; // Logotipo blanco al inicio
 
   return (
     <header 
@@ -34,7 +39,7 @@ export const Header: React.FC = () => {
              <img 
                src="/images/logo-fisio.webp" 
                alt="FisioElisa - Clínica de Fisioterapia" 
-               className="h-14 md:h-20 w-auto object-contain"
+               className={`h-14 md:h-20 w-auto object-contain transition-all duration-300 ${logoFilterClass}`}
                width="200"
                height="80"
              />
@@ -46,7 +51,7 @@ export const Header: React.FC = () => {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-sm font-medium text-brand-text hover:text-brand-primary transition-colors"
+                className={`text-sm font-medium transition-colors ${textColorClass} ${hoverColorClass}`}
               >
                 {link.name}
               </a>
@@ -56,7 +61,7 @@ export const Header: React.FC = () => {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden text-brand-secondary p-2"
+            className={`md:hidden p-2 transition-colors ${textColorClass}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

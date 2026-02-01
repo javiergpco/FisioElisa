@@ -203,7 +203,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Marquee Card */}
-            <div className="animate-fade-in delay-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-8 backdrop-blur-xl">
+            <div id="tecnologias" className="scroll-mt-28 animate-fade-in delay-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-8 backdrop-blur-xl">
               <h3 className="mb-6 px-8 text-sm font-medium text-gray-400">Tecnologías y Colaboradores</h3>
               
               <div 

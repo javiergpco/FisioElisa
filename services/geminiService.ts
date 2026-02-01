@@ -28,7 +28,7 @@ export const sendChatToAssistant = async (
       Detalles de la clínica:
       - Especialidad: Terapia manual, tecnología avanzada (Indiba, Neuromodulación), suelo pélvico.
       - Precios: Sesión normal 30€, Sesión Avanzada 35€.
-      - Ubicación: C. de la Plaza, 123, Chiclana.
+      - Ubicación: C.C. El Camino, Carr. de las Lagunas, 1ª Planta, 11130 Chiclana de la Frontera, Cádiz.
       - Horario: Lun - Jue 09:00 - 14:00 y 16:00 - 21:00. Viernes 09:00 - 14:00.
       
       Tu objetivo es responder dudas breves sobre tratamientos, precios y horarios. 

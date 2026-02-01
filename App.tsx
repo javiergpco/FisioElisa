@@ -5,7 +5,7 @@ import { Services } from './components/Services';
 import { PricingSection } from './components/PricingSection';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
-import { AIChatWidget } from './components/AIChatWidget';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 const App: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <About />
       </main>
       <Footer />
-      <AIChatWidget />
+      <WhatsAppButton />
     </div>
   );
 };

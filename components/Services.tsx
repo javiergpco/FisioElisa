@@ -63,7 +63,7 @@ const SERVICES_DATA: Service[] = [
 
 export const Services: React.FC = () => {
   return (
-    <section id="servicios" className="py-20 bg-brand-beige">
+    <section id="servicios" className="py-20 bg-brand-beige scroll-mt-28">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Section Header */}
