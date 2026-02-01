@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Location */}
+          {/* Location & Map */}
           <div className="space-y-6">
              <h4 className="text-brand-accent font-bold uppercase tracking-wider text-sm">Dónde Estamos</h4>
              <div className="flex gap-3 text-sm text-gray-300">
@@ -40,16 +40,19 @@ export const Footer: React.FC = () => {
                   <p>11130 Chiclana de la Frontera, Cádiz</p>
                 </div>
              </div>
-             {/* Map Placeholder */}
-             <div className="w-full h-32 bg-black/20 rounded-xl overflow-hidden relative group cursor-pointer">
-               <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                alt="Mapa" 
-                className="w-full h-full object-cover opacity-50 group-hover:opacity-75 transition-opacity"
-               />
-               <div className="absolute inset-0 flex items-center justify-center">
-                 <span className="bg-brand-primary/90 text-white text-xs px-3 py-1 rounded-full">Ver en Mapa</span>
-               </div>
+             
+             {/* Google Maps Iframe - No API Key Required */}
+             <div className="w-full h-40 bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-white/10">
+               <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.578649887556!2d-6.150654824246086!3d36.41689297235948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c4ca56e29783b%3A0xa64825927582570!2sC.%20la%20Plaza%2C%2011130%20Chiclana%20de%20la%20Frontera%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1709660000000!5m2!1ses!2ses" 
+                 width="100%" 
+                 height="100%" 
+                 style={{ border: 0 }} 
+                 allowFullScreen={false} 
+                 loading="lazy" 
+                 referrerPolicy="no-referrer-when-downgrade"
+                 title="Mapa Ubicación Clínica"
+               ></iframe>
              </div>
           </div>
 

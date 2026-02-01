@@ -1,18 +1,25 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// CRÍTICO: Evita crash inicial si process.env.API_KEY es undefined.
+const apiKey = process.env.API_KEY || "API_KEY_MISSING_PLACEHOLDER";
+const ai = new GoogleGenAI({ apiKey });
 
 export const sendChatToAssistant = async (
   message: string,
   history: { role: string; text: string }[]
 ): Promise<string> => {
   try {
+    // Verificación segura dentro de la función
+    if (apiKey === "API_KEY_MISSING_PLACEHOLDER") {
+      console.warn("API Key no configurada.");
+      return "El sistema de chat está en mantenimiento (Falta configuración API). Por favor contacta por teléfono.";
+    }
+
     const formattedHistory = history.map(h => ({
       role: h.role,
       parts: [{ text: h.text }]
     }));
 
-    // We use a specific model good for text interactions
     const model = "gemini-3-flash-preview";
     
     const systemInstruction = `
@@ -26,7 +33,6 @@ export const sendChatToAssistant = async (
       
       Tu objetivo es responder dudas breves sobre tratamientos, precios y horarios. 
       Sé conciso, empático y anima siempre a "Pedir Cita".
-      No des diagnósticos médicos complejos, recomienda siempre una valoración presencial.
     `;
 
     const chat = ai.chats.create({
