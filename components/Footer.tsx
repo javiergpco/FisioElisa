@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
                <img 
                  src="/images/logo-fisio.webp" 
                  alt="Logo Clínica de Fisioterapia Elisa Morilla" 
-                 className="h-16 md:h-[70px] w-auto object-contain bg-white rounded-lg p-2"
+                 className="h-16 md:h-[70px] w-auto object-contain brightness-0 invert"
                />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed max-w-sm">

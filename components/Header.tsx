@@ -34,9 +34,9 @@ export const Header: React.FC = () => {
              <img 
                src="/images/logo-fisio.webp" 
                alt="FisioElisa - Clínica de Fisioterapia" 
-               className="h-10 md:h-[50px] w-auto object-contain"
+               className="h-14 md:h-20 w-auto object-contain"
                width="200"
-               height="50"
+               height="80"
              />
           </a>
 

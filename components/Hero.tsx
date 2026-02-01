@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { 
   ArrowRight, 
   Play, 
@@ -11,6 +11,15 @@ import {
   Award,
   Stethoscope
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// --- IMÁGENES DEL CARRUSEL ---
+const HERO_IMAGES = [
+  "/images/hero-slide-1.webp",
+  "/images/hero-slide-2.webp",
+  "/images/hero-slide-3.webp",
+  "/images/hero-slide-4.webp"
+];
 
 // --- MOCK BRANDS (Technologies & Insurers) ---
 const PARTNERS = [
@@ -30,8 +39,19 @@ const StatItem = ({ value, label }: { value: string; label: string }) => (
 );
 
 export const Hero: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Lógica del Carrusel Automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HERO_IMAGES.length);
+    }, 4000); // Cambia cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative w-full bg-brand-secondary text-white overflow-hidden font-sans">
+    <div className="relative w-full min-h-[700px] lg:h-screen bg-brand-secondary text-white overflow-hidden font-sans">
       <style>{`
         @keyframes fadeSlideIn {
           from { opacity: 0; transform: translateY(20px); }
@@ -55,17 +75,31 @@ export const Hero: React.FC = () => {
         .delay-500 { animation-delay: 0.5s; }
       `}</style>
 
-      {/* Background Image with Gradient Mask */}
-      <div 
-        className="absolute inset-0 z-0 bg-[url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)] bg-cover bg-center opacity-20"
-        style={{
-          maskImage: "linear-gradient(180deg, transparent, black 0%, black 70%, transparent)",
-          WebkitMaskImage: "linear-gradient(180deg, transparent, black 0%, black 70%, transparent)",
-        }}
-      />
+      {/* --- CARRUSEL DE FONDO (Z-0) --- */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={currentImageIndex}
+            src={HERO_IMAGES[currentImageIndex]}
+            alt="Fondo Clínica FisioElisa"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </AnimatePresence>
+        
+        {/* Overlay Oscuro para legibilidad */}
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        
+        {/* Gradiente adicional para suavizar la unión con la siguiente sección */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-secondary/30 via-transparent to-brand-secondary/90 z-20"></div>
+      </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 md:pt-40 md:pb-24 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-start">
+      {/* --- CONTENIDO PRINCIPAL (Z-10) --- */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 md:pt-40 md:pb-24 lg:px-8 h-full flex items-center">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-start w-full">
           
           {/* --- LEFT COLUMN --- */}
           <div className="lg:col-span-7 flex flex-col justify-center space-y-8 pt-4">
@@ -92,7 +126,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Description */}
-            <p className="animate-fade-in delay-300 max-w-xl text-lg text-gray-300 leading-relaxed">
+            <p className="animate-fade-in delay-300 max-w-xl text-lg text-gray-200 leading-relaxed font-light">
               Combinamos terapia manual experta con la tecnología más innovadora para acelerar tu recuperación. Tu bienestar es nuestra única meta.
             </p>
 
@@ -114,7 +148,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-5 space-y-6 lg:mt-12">
             
             {/* Stats Card */}
-            <div className="animate-fade-in delay-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-2xl">
+            <div className="animate-fade-in delay-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-8 backdrop-blur-md shadow-2xl">
               {/* Card Glow Effect */}
               <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-brand-primary/20 blur-3xl pointer-events-none" />
 
@@ -132,7 +166,7 @@ export const Hero: React.FC = () => {
                 {/* Progress Bar Section */}
                 <div className="space-y-3 mb-8">
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Satisfacción del Paciente</span>
+                    <span className="text-gray-300">Satisfacción del Paciente</span>
                     <span className="text-white font-medium">99%</span>
                   </div>
                   <div className="h-2 w-full overflow-hidden rounded-full bg-black/20">
