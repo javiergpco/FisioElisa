@@ -158,7 +158,7 @@ export const Hero: React.FC = () => {
                     <Target className="h-6 w-6 text-brand-primary" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold tracking-tight text-white">1,500+</div>
+                    <div className="text-3xl font-bold tracking-tight text-white">350+</div>
                     <div className="text-sm text-brand-accent/80">Pacientes Recuperados</div>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export const Hero: React.FC = () => {
 
                 {/* Mini Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 text-center">
-                  <StatItem value="15+" label="Años Exp" />
+                  <StatItem value="10+" label="Años Exp" />
                   <div className="w-px h-full bg-white/10 mx-auto" />
                   <StatItem value="1 a 1" label="Atención" />
                   <div className="w-px h-full bg-white/10 mx-auto" />
