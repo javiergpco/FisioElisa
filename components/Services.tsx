@@ -63,8 +63,8 @@ const SERVICES_DATA: Service[] = [
 
 export const Services: React.FC = () => {
   return (
-    <section id="servicios" className="py-20 bg-brand-beige scroll-mt-28">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="servicios" className="py-20 bg-brand-beige/95 scroll-mt-28 relative">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-16">

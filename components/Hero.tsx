@@ -167,10 +167,10 @@ export const Hero: React.FC = () => {
                 <div className="space-y-3 mb-8">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-300">Satisfacción del Paciente</span>
-                    <span className="text-white font-medium">99%</span>
+                    <span className="text-white font-medium">98%</span>
                   </div>
                   <div className="h-2 w-full overflow-hidden rounded-full bg-black/20">
-                    <div className="h-full w-[99%] rounded-full bg-gradient-to-r from-brand-primary to-brand-accent" />
+                    <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-brand-primary to-brand-accent" />
                   </div>
                 </div>
 

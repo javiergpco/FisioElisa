@@ -136,10 +136,10 @@ export const PricingSection: React.FC = () => {
   };
 
   return (
-    <section id="tarifas" className="py-24 bg-brand-bg relative overflow-hidden scroll-mt-28">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    <section id="tarifas" className="py-24 bg-brand-beige/95 relative overflow-hidden scroll-mt-28">
+      {/* Background Decor (Static) - Bubbles are global now */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         

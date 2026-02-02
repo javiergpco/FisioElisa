@@ -3,8 +3,8 @@ import { Users, BookOpen, Stethoscope, ClipboardList } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="sobre-nosotros" className="py-20 bg-brand-beige">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="sobre-nosotros" className="py-20 bg-brand-beige/95 relative">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
           {/* Left Side: Text + List */}
