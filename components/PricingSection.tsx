@@ -145,7 +145,7 @@ export const PricingSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-2">Tarifas 2024</h2>
+          <h2 className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-2">Tarifas 2026</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-4">Invierte en tu Salud</h3>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Selecciona la categoría para ver nuestros planes de tratamiento y bonos de ahorro.

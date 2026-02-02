@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               className="py-2 px-5 text-sm"
               onClick={() => handleLinkClick('contacto')}
             >
-              Pedir Cita
+              Contacto
             </Button>
           </nav>
 
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
             className="w-full justify-center"
             onClick={() => handleLinkClick('contacto')}
           >
-            Pedir Cita
+            Contacto
           </Button>
         </div>
       )}

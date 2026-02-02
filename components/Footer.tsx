@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p>© 2024 Clínica de Fisioterapia Elisa Morilla. Todos los derechos reservados.</p>
+          <p>© 2026 Clínica de Fisioterapia Elisa Morilla. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gray-300">Aviso Legal</a>
             <a href="#" className="hover:text-gray-300">Privacidad</a>
