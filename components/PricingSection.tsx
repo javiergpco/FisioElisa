@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell } from 'lucide-react';
+import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell, Brain } from 'lucide-react';
 
 // Definición de tipos para los datos
 type CategoryId = 'fisio' | 'neuro' | 'diatermia' | 'especializadas';
@@ -57,6 +57,16 @@ const PRICING_DATA: Treatment[] = [
     description: "Readaptación funcional tras lesiones para volver al rendimiento óptimo.",
     category: 'especializadas',
     icon: <Dumbbell className="w-6 h-6" />,
+    options: [
+      { sessions: 1, price: 40 }
+    ]
+  },
+  {
+    id: 'neuromodulacion',
+    title: "Neuromodulación",
+    description: "Estimulación eléctrica ecoguiada para normalizar la función nerviosa.",
+    category: 'especializadas',
+    icon: <Brain className="w-6 h-6" />,
     options: [
       { sessions: 1, price: 40 }
     ]

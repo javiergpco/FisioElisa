@@ -66,6 +66,14 @@ const SERVICES_DATA: Service[] = [
     image: "/images/service-7.webp", 
     duration: "45 min",
     price: "Desde 40 €"
+  },
+  {
+    id: 8,
+    title: "Neuromodulación",
+    description: "Técnica avanzada que normaliza la función del sistema nervioso mediante estimulación eléctrica ecoguiada, tratando el dolor crónico de raíz.",
+    image: "/images/service-8.webp", 
+    duration: "45 min",
+    price: "Desde 40 €"
   }
 ];
 
