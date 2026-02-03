@@ -6,7 +6,6 @@ import {
   Crown, 
   Zap,
   ShieldCheck,
-  Heart,
   Activity,
   Award,
   Stethoscope
@@ -23,9 +22,7 @@ const HERO_IMAGES = [
 
 // --- MOCK BRANDS (Technologies & Insurers) ---
 const PARTNERS = [
-  { name: "Indiba Activ", icon: Zap },
-  { name: "Sanitas", icon: Heart },
-  { name: "Mapfre", icon: ShieldCheck },
+  { name: "Winback", icon: Zap },
   { name: "Ecografía", icon: Activity },
   { name: "Colegiados", icon: Award },
   { name: "Terapia Manual", icon: Stethoscope },
@@ -178,7 +175,7 @@ export const Hero: React.FC = () => {
 
                 {/* Mini Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 text-center">
-                  <StatItem value="10+" label="Años Exp" />
+                  <StatItem value="+5" label="Años Exp" />
                   <div className="w-px h-full bg-white/10 mx-auto" />
                   <StatItem value="1 a 1" label="Atención" />
                   <div className="w-px h-full bg-white/10 mx-auto" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Clock, Euro } from 'lucide-react';
 
 interface Service {
@@ -15,7 +15,7 @@ const SERVICES_DATA: Service[] = [
     id: 1,
     title: "Fisioterapia",
     description: "Valoración y tratamiento personalizado mediante terapia manual y ejercicio terapéutico para aliviar el dolor musculoesquelético y restaurar la función.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/service-1.webp",
     duration: "45 min",
     price: "Desde 40 €"
   },
@@ -23,7 +23,7 @@ const SERVICES_DATA: Service[] = [
     id: 2,
     title: "Recuperación deportiva",
     description: "Readaptación funcional específica para deportistas. Enfocada en la prevención de recaídas y la vuelta segura a la competición tras una lesión.",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/service-2.webp",
     duration: "45 min",
     price: "Desde 40 €"
   },
@@ -31,15 +31,15 @@ const SERVICES_DATA: Service[] = [
     id: 3,
     title: "Recuperación neurológica",
     description: "Tratamiento especializado para pacientes con daño cerebral adquirido o enfermedades neurodegenerativas (Ictus, Parkinson) para mejorar la autonomía.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/service-3.webp",
     duration: "45 min",
-    price: "Desde 40 €"
+    price: "Desde 45 €"
   },
   {
     id: 4,
     title: "Tecarterapia",
-    description: "Tecnología avanzada (Indiba) que acelera los mecanismos naturales de regeneración del tejido y alivia el dolor desde la primera sesión.",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a25a8396?q=80&w=2070&auto=format&fit=crop", 
+    description: "Tecnología avanzada (Winback) que acelera los mecanismos naturales de regeneración del tejido y alivia el dolor desde la primera sesión.",
+    image: "/images/service-4.webp", 
     duration: "45 min",
     price: "Desde 40 €"
   },
@@ -47,7 +47,7 @@ const SERVICES_DATA: Service[] = [
     id: 5,
     title: "Punción seca y electropunción",
     description: "Técnicas invasivas ecoguíadas altamente efectivas para el tratamiento del síndrome de dolor miofascial, puntos gatillo y contracturas resistentes.",
-    image: "https://images.unsplash.com/photo-1628140417688-6c8430bd69a0?q=80&w=2070&auto=format&fit=crop", 
+    image: "/images/service-5.webp", 
     duration: "45 min",
     price: "Desde 40 €"
   },
@@ -55,7 +55,7 @@ const SERVICES_DATA: Service[] = [
     id: 6,
     title: "Diatermia",
     description: "Tratamientos estéticos faciales y corporales que mejoran la calidad de la piel, favorecen la producción de colágeno y la regeneración celular.",
-    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop", 
+    image: "/images/service-6.webp", 
     duration: "45 min",
     price: "Desde 50 €"
   },
@@ -63,7 +63,7 @@ const SERVICES_DATA: Service[] = [
     id: 7,
     title: "Ondas de Choque",
     description: "Terapia acústica de alta energía ideal para tratar tendinopatías crónicas, fascitis plantar y disolver calcificaciones de forma no invasiva.",
-    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2091&auto=format&fit=crop", 
+    image: "/images/service-7.webp", 
     duration: "45 min",
     price: "Desde 40 €"
   }

@@ -52,7 +52,7 @@ export const About: React.FC = () => {
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-white/50">
               <BookOpen className="w-8 h-8 text-brand-accent mb-3" />
               <h3 className="font-bold text-brand-secondary text-sm mb-2">Experiencia Clínica</h3>
-              <p className="text-xs text-brand-text">Años de formación especializada en técnicas invasivas y suelo pélvico.</p>
+              <p className="text-xs text-brand-text">Años de formación especializada en técnicas invasivas.</p>
             </div>
 
             <div className="sm:col-span-2 bg-brand-secondary rounded-2xl p-6 text-white flex items-center gap-6 relative overflow-hidden shadow-lg">

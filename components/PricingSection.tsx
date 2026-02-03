@@ -63,7 +63,7 @@ const PRICING_DATA: Treatment[] = [
   },
   {
     id: 'tecarterapia',
-    title: "Tecarterapia (Indiba)",
+    title: "Tecarterapia (Winback)",
     description: "Acelera los procesos naturales de reparación del tejido.",
     category: 'especializadas',
     icon: <Zap className="w-6 h-6" />,

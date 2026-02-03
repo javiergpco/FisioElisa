@@ -20,7 +20,7 @@ export const Contact: React.FC<ContactProps> = ({ onBack }) => {
     "Fisioterapia General",
     "Neurología",
     "Deportiva",
-    "Diatermia/Indiba",
+    "Diatermia/Winback",
     "Otro"
   ];
 

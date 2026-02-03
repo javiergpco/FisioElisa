@@ -26,8 +26,8 @@ export const sendChatToAssistant = async (
       Eres el asistente virtual amable y profesional de "FisioElisa", una clínica de fisioterapia avanzada en Chiclana.
       
       Detalles de la clínica:
-      - Especialidad: Terapia manual, tecnología avanzada (Indiba, Neuromodulación), suelo pélvico.
-      - Precios: Tratamientos generales desde 40€. Diatermia estética desde 50€.
+      - Especialidad: Terapia manual, tecnología avanzada (Winback, Neuromodulación), suelo pélvico.
+      - Precios: Tratamientos generales desde 40€. Neurología desde 45€. Diatermia estética desde 50€.
       - Ubicación: C.C. El Camino, Carr. de las Lagunas, 1ª Planta, 11130 Chiclana de la Frontera, Cádiz.
       - Horario: Lun - Jue 09:00 - 14:00 y 16:00 - 21:00. Viernes 09:00 - 14:00.
       

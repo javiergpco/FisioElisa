@@ -51,7 +51,7 @@ export const Pricing: React.FC = () => {
             </div>
             
             <ul className="space-y-4 mb-8">
-              {['Todo lo de la sesión básica', 'Tecnología Indiba/Neuromodulación', 'Seguimiento personalizado'].map((item) => (
+              {['Todo lo de la sesión básica', 'Tecnología Winback/Neuromodulación', 'Seguimiento personalizado'].map((item) => (
                 <li key={item} className="flex items-center gap-3">
                    <div className="bg-brand-primary rounded-full p-1">
                     <Check className="w-3 h-3 text-white" />

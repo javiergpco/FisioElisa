@@ -43,8 +43,8 @@ const TECHNOLOGIES = [
     bg: "bg-brand-primary/10"
   },
   {
-    title: "Ondas de Choque",
-    desc: "Tratamiento eficaz para lesiones crónicas y calcificaciones.",
+    title: "Ecógrafo Vinno",
+    desc: "Tecnología de imagen de alta resolución para un diagnóstico preciso y tratamientos invasivos ecoguiados con máxima seguridad.",
     icon: <Activity className="w-8 h-8 text-brand-accent" />,
     bg: "bg-brand-accent/10"
   },
@@ -97,7 +97,7 @@ export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
                   Elisa Morilla Fernández
                 </h1>
                 <h2 className="text-brand-primary font-bold uppercase tracking-wider text-sm md:text-base mb-1">
-                  Graduada en Fisioterapia por la Universidad de Cádiz
+                  Graduada en Fisioterapia por la Universidad de Valencia
                 </h2>
                 <p className="text-gray-400 text-sm font-medium">Colegiada Nº 9982</p>
               </div>
@@ -105,7 +105,7 @@ export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
               <div className="w-24 h-1.5 bg-brand-accent mx-auto md:mx-0 rounded-full"></div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Mi pasión es la recuperación funcional real. Cuento con un <strong className="text-brand-secondary">Máster en el Abordaje del Daño Cerebral Adquirido (UPO)</strong> y años de experiencia clínica.
+                Mi pasión es la recuperación funcional real. Soy <strong className="text-brand-secondary">Experta Universitaria en Ecografía y Técnicas Invasivas</strong> y cuento con años de experiencia clínica.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Mi enfoque se basa en la <strong className="text-brand-primary">atención personalizada 1 a 1</strong>, huyendo de las terapias masificadas. Combino la terapia manual experta con la última evidencia científica en <span className="underline decoration-brand-accent decoration-2 underline-offset-2">Neurorrehabilitación</span> y <span className="underline decoration-brand-accent decoration-2 underline-offset-2">Fisioterapia Deportiva</span>.
