@@ -10,7 +10,6 @@ import { SobreElisa } from './components/SobreElisa';
 import { Contact } from './components/Contact';
 import { BackgroundBubbles } from './components/BackgroundBubbles';
 import { TestimonialsSection } from './components/TestimonialsSection';
-import { AIChatWidget } from './components/AIChatWidget';
 
 const App: React.FC = () => {
   // Estado para controlar qué página se muestra
@@ -61,9 +60,6 @@ const App: React.FC = () => {
       <main className="flex-grow relative z-10">
         {renderContent()}
       </main>
-
-      {/* Widget de Chat con IA */}
-      <AIChatWidget />
 
       {/* Footer y Widgets Persistentes */}
       <div className="relative z-20">
