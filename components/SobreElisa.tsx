@@ -19,7 +19,7 @@ interface SobreElisaProps {
 }
 
 const COURSES = [
-  "Máster en el Abordaje del Daño Cerebral Adquirido (UPO)",
+  "Máster en el Abordaje del Daño Cerebral Adquirido (CEU)",
   "Fisioterapia en disfunciones de Suelo Pélvico",
   "Rehabilitación Cardíaca en Patologías Cardíacas",
   "Fisioterapia en Lesiones de Tobillo y Rodilla",
@@ -105,7 +105,7 @@ export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
               <div className="w-24 h-1.5 bg-brand-accent mx-auto md:mx-0 rounded-full"></div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Mi pasión es la recuperación funcional real. Soy <strong className="text-brand-secondary">Experta Universitaria en Ecografía y Técnicas Invasivas</strong> y cuento con años de experiencia clínica.
+                Mi pasión es la recuperación funcional real. Soy <strong className="text-brand-secondary">Experta en Tratamientos Neurológicos</strong> y cuento con años de experiencia clínica.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Mi enfoque se basa en la <strong className="text-brand-primary">atención personalizada 1 a 1</strong>, huyendo de las terapias masificadas. Combino la terapia manual experta con la última evidencia científica en <span className="underline decoration-brand-accent decoration-2 underline-offset-2">Neurorrehabilitación</span> y <span className="underline decoration-brand-accent decoration-2 underline-offset-2">Fisioterapia Deportiva</span>.

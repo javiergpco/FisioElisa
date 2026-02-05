@@ -5,7 +5,6 @@ import {
   Target, 
   Crown, 
   Zap,
-  ShieldCheck,
   Activity,
   Award,
   Stethoscope
@@ -101,16 +100,6 @@ export const Hero: React.FC = () => {
           {/* --- LEFT COLUMN --- */}
           <div className="lg:col-span-7 flex flex-col justify-center space-y-8 pt-4">
             
-            {/* Badge */}
-            <div className="animate-fade-in delay-100">
-              <div className="inline-flex items-center gap-2 rounded-full border border-brand-accent/20 bg-brand-accent/10 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-brand-accent/20">
-                <ShieldCheck className="w-3.5 h-3.5 text-brand-accent" />
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-brand-accent flex items-center gap-2">
-                  Centro Sanitario Autorizado
-                </span>
-              </div>
-            </div>
-
             {/* Heading */}
             <h1 
               className="animate-fade-in delay-200 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tighter leading-[1]"
@@ -155,7 +144,7 @@ export const Hero: React.FC = () => {
                     <Target className="h-6 w-6 text-brand-primary" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold tracking-tight text-white">350+</div>
+                    <div className="text-3xl font-bold tracking-tight text-white">+1000</div>
                     <div className="text-sm text-brand-accent/80">Pacientes Recuperados</div>
                   </div>
                 </div>

@@ -46,7 +46,6 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
   const navLinks = [
     { name: 'Servicios', page: 'home', anchor: '#servicios' },
     { name: 'Tarifas', page: 'home', anchor: '#tarifas' },
-    { name: 'Tecnologías', page: 'home', anchor: '#tecnologias' },
     { name: 'Sobre FisioElisa', page: 'sobre-elisa', anchor: undefined },
   ];
 
