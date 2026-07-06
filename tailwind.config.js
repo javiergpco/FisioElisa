@@ -10,9 +10,9 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#289694',   // Teal/Verde quirúrgico
+          primary: '#9FAD8A',   // Verde salvia (Nuevo primario)
           secondary: '#1B365D', // Azul marino
-          accent: '#4FD1C5',    // Turquesa claro
+          accent: '#BAC8A5',    // Verde salvia claro (Acento)
           bg: '#F4F7F6',        // Gris clínico suave
           text: '#334155',      // Gris pizarra
           beige: '#F9F6F0',     // Beige cálido

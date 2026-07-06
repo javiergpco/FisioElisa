@@ -118,9 +118,9 @@ export const Contact: React.FC<ContactProps> = ({ onBack }) => {
                 <div>
                   <p className="text-sm font-medium text-gray-400">Ubicación</p>
                   <p className="text-lg font-medium text-brand-secondary">
-                    Run&Fit Chiclana
+                    Centro Comercial Las Redes
                   </p>
-                  <p className="text-sm text-gray-500">C.C. El Camino, Carr. de las Lagunas</p>
+                  <p className="text-sm text-gray-500">Portal 1, Local 31. 11130 Chiclana de la Frontera (Cádiz)</p>
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { PricingSection } from './components/PricingSection';
 import { About } from './components/About';
+import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { SobreElisa } from './components/SobreElisa';
@@ -31,10 +32,22 @@ const App: React.FC = () => {
             <PricingSection />
             <TestimonialsSection />
             <About />
+            <ContactSection />
           </>
         );
       case 'sobre-elisa':
-        return <SobreElisa onBackToHome={() => setPagina('home')} />;
+        return (
+          <SobreElisa 
+            onBackToHome={() => setPagina('home')} 
+            onNavigateToContact={() => {
+              setPagina('home');
+              setTimeout(() => {
+                const element = document.getElementById('contacto-seccion');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }} 
+          />
+        );
       case 'contacto':
         return <Contact onBack={() => setPagina('home')} />;
       default:
@@ -45,6 +58,7 @@ const App: React.FC = () => {
             <PricingSection />
             <TestimonialsSection />
             <About />
+            <ContactSection />
           </>
         );
     }

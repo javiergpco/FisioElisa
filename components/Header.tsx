@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
   const hoverColorClass = showSolid ? 'hover:text-brand-primary' : 'hover:text-brand-accent';
   const logoFilterClass = showSolid ? '' : 'brightness-0 invert';
   const bgClass = showSolid 
-    ? 'bg-brand-bg/95 backdrop-blur-sm shadow-md py-3' 
+    ? 'bg-brand-bg/95 backdrop-blur-sm shadow-md py-1.5 md:py-1' 
     : 'bg-transparent py-5';
 
   return (
@@ -70,11 +70,13 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
             className="block cursor-pointer focus:outline-none"
           >
              <img 
-               src="/images/logo-fisio.webp" 
+               src="/images/logo-fisio.png" 
                alt="FisioElisa - Clínica de Fisioterapia" 
-               className={`h-14 md:h-20 w-auto object-contain transition-all duration-300 ${logoFilterClass}`}
-               width="200"
-               height="80"
+               className={`w-auto object-contain transition-all duration-500 ${
+                 showSolid ? 'h-14 md:h-[76px]' : 'h-28 md:h-40'
+               } ${logoFilterClass}`}
+               width="240"
+               height="112"
              />
           </button>
 

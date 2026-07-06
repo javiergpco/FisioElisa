@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         
         {/* Gradiente adicional para suavizar la unión con la siguiente sección */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-secondary/30 via-transparent to-brand-secondary/90 z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-brand-primary/90 z-20"></div>
       </div>
 
       {/* --- CONTENIDO PRINCIPAL (Z-10) --- */}
@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4">
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#1f7a78] active:scale-[0.98] shadow-lg shadow-brand-primary/20">
+              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#849171] active:scale-[0.98] shadow-lg shadow-brand-primary/20">
                 Pedir Cita Ahora
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>

@@ -16,6 +16,7 @@ import { Button } from './Button';
 
 interface SobreElisaProps {
   onBackToHome: () => void;
+  onNavigateToContact?: () => void;
 }
 
 const COURSES = [
@@ -56,7 +57,7 @@ const TECHNOLOGIES = [
   }
 ];
 
-export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
+export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome, onNavigateToContact }) => {
   const [areCoursesVisible, setAreCoursesVisible] = useState(false);
 
   return (
@@ -112,7 +113,10 @@ export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
               </p>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button onClick={() => window.location.href='#contacto'} className="px-8 shadow-brand-primary/30">
+                <Button 
+                  onClick={() => onNavigateToContact ? onNavigateToContact() : (window.location.href='#contacto')} 
+                  className="px-8 shadow-brand-primary/30"
+                >
                   Pedir Cita con Elisa
                 </Button>
               </div>
@@ -253,7 +257,11 @@ export const SobreElisa: React.FC<SobreElisaProps> = ({ onBackToHome }) => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-6">Tu salud en las mejores manos</h2>
           <div className="flex justify-center gap-4">
-            <Button onClick={() => window.location.href='#contacto'} variant="primary" className="bg-brand-accent text-brand-secondary hover:bg-white hover:text-brand-primary">
+            <Button 
+              onClick={() => onNavigateToContact ? onNavigateToContact() : (window.location.href='#contacto')} 
+              variant="primary" 
+              className="bg-brand-accent text-brand-secondary hover:bg-white hover:text-brand-primary"
+            >
               Reservar Cita
             </Button>
             <Button onClick={onBackToHome} variant="outline" className="border-white text-white hover:bg-white/10">

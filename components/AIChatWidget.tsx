@@ -101,7 +101,7 @@ export const AIChatWidget: React.FC = () => {
               <button 
                 onClick={handleSend}
                 disabled={isLoading || !input.trim()}
-                className="bg-brand-primary hover:bg-[#1f7a78] text-white p-2 rounded-full disabled:opacity-50 transition-colors"
+                className="bg-brand-primary hover:bg-[#849171] text-white p-2 rounded-full disabled:opacity-50 transition-colors"
               >
                 <Send className="w-5 h-5" />
               </button>
@@ -113,7 +113,7 @@ export const AIChatWidget: React.FC = () => {
       {/* Toggle Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-brand-primary hover:bg-[#1f7a78] text-white p-4 rounded-full shadow-lg shadow-brand-primary/40 transition-transform hover:scale-110 flex items-center gap-2 group"
+        className="bg-brand-primary hover:bg-[#849171] text-white p-4 rounded-full shadow-lg shadow-brand-primary/40 transition-transform hover:scale-110 flex items-center gap-2 group"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         {!isOpen && <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-medium">¿Dudas?</span>}

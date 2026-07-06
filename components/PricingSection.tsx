@@ -262,7 +262,7 @@ export const PricingSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-lg font-semibold transition-all duration-200 ${
                     treatment.popular
-                      ? 'bg-brand-primary text-white hover:bg-[#1f7a78] shadow-lg shadow-brand-primary/25'
+                      ? 'bg-brand-primary text-white hover:bg-[#849171] shadow-lg shadow-brand-primary/25'
                       : 'bg-white border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white'
                   }`}
                 >

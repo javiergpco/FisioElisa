@@ -1,5 +1,6 @@
 {
   "name": "FisioElisa",
   "description": "Advanced physiotherapy clinic website featuring manual therapy, cutting-edge technology, and AI-powered patient assistance.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
