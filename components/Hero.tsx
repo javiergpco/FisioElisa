@@ -118,12 +118,24 @@ export const Hero: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4">
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#849171] active:scale-[0.98] shadow-lg shadow-brand-primary/20">
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('contacto-seccion');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#849171] active:scale-[0.98] shadow-lg shadow-brand-primary/20"
+              >
                 Pedir Cita Ahora
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20">
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('servicios');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
+              >
                 <Play className="w-4 h-4 fill-current" />
                 Ver Tratamientos
               </button>
