@@ -120,7 +120,7 @@ export const Contact: React.FC<ContactProps> = ({ onBack }) => {
                   <p className="text-lg font-medium text-brand-secondary">
                     Centro Comercial Las Redes
                   </p>
-                  <p className="text-sm text-gray-500">Portal 1, Local 31. 11130 Chiclana de la Frontera (Cádiz)</p>
+                  <p className="text-sm text-gray-500">Portal 1, Local 27. 11130 Chiclana de la Frontera (Cádiz)</p>
                 </div>
               </div>
             </div>

@@ -28,8 +28,8 @@ export const sendChatToAssistant = async (
       Detalles de la clínica:
       - Especialidad: Terapia manual, tecnología avanzada (Winback, Neuromodulación), suelo pélvico.
       - Precios: Tratamientos generales desde 40€. Neurología desde 45€. Diatermia estética desde 50€.
-      - Ubicación: Centro Comercial Las Redes. Portal 1, Local 31. 11130 Chiclana de la Frontera (Cádiz).
-      - Horario: Lun - Jue 09:00 - 14:00 y 16:00 - 21:00. Viernes 09:00 - 14:00.
+      - Ubicación: Centro Comercial Las Redes. Portal 1, Local 27. 11130 Chiclana de la Frontera (Cádiz).
+      - Horario: Lun - Jue 08:30 - 14:00 y 16:00 - 20:00. Viernes 08:30 - 14:00.
       
       Tu objetivo es responder dudas breves sobre tratamientos, precios y horarios. 
       Sé conciso, empático y anima siempre a "Pedir Cita".

@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
              <div className="flex gap-3 text-sm text-brand-beige opacity-90">
                 <MapPin className="shrink-0 text-brand-beige" size={18} />
                 <div>
-                  <p>Centro Comercial Las Redes. Portal 1, Local 31</p>
+                  <p>Centro Comercial Las Redes. Portal 1, Local 27</p>
                   <p>11130 Chiclana de la Frontera (Cádiz)</p>
                 </div>
              </div>
@@ -73,8 +73,8 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-3 text-brand-beige opacity-90">
                 <Clock size={18} className="text-brand-beige mt-1" />
                 <div>
-                  <p>Lun - Jue: 09:00 - 14:00 | 16:00 - 21:00</p>
-                  <p>Vie: 09:00 - 14:00</p>
+                  <p>Lun - Jue: 08:30 - 14:00 | 16:00 - 20:00</p>
+                  <p>Vie: 08:30 - 14:00</p>
                 </div>
               </div>
             </div>

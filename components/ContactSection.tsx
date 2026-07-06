@@ -99,7 +99,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <h5 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Dirección</h5>
                     <p className="text-brand-secondary font-medium mt-0.5 leading-snug">
-                      Centro Comercial Las Redes. Portal 1, Local 31
+                      Centro Comercial Las Redes. Portal 1, Local 27
                     </p>
                     <p className="text-sm text-gray-500">
                       11130 Chiclana de la Frontera (Cádiz)
