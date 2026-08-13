@@ -46,7 +46,8 @@ const PRICING_DATA: Treatment[] = [
     category: 'neuro',
     icon: <User className="w-6 h-6" />,
     options: [
-      { sessions: 1, price: 45 }
+      { sessions: 1, price: 45 },
+      { sessions: 5, price: 180, basePriceRef: 45 },
     ]
   },
 
@@ -110,9 +111,9 @@ const PRICING_DATA: Treatment[] = [
     category: 'diatermia',
     icon: <Sparkles className="w-6 h-6" />,
     options: [
-      { sessions: 1, price: 50 },
-      { sessions: 5, price: 200, basePriceRef: 50 },
-      { sessions: 10, price: 400, basePriceRef: 50 },
+      { sessions: 1, price: 60 },
+      { sessions: 5, price: 250, basePriceRef: 60 },
+      { sessions: 10, price: 400, basePriceRef: 60 },
     ]
   },
   {
@@ -122,7 +123,8 @@ const PRICING_DATA: Treatment[] = [
     category: 'diatermia',
     icon: <Sparkles className="w-6 h-6" />,
     options: [
-      { sessions: 5, price: 250, label: "Abdomen" },
+      { sessions: 1, price: 60, label: "Sesión Individual - Abdomen" },
+      { sessions: 5, price: 250, label: "Bono de 5 sesiones en abdomen", basePriceRef: 60 },
       { sessions: 5, price: 400, label: "Glúteos + Muslos" },
     ]
   }
