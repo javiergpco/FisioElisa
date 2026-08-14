@@ -113,7 +113,7 @@ const PRICING_DATA: Treatment[] = [
     options: [
       { sessions: 1, price: 60 },
       { sessions: 5, price: 250, basePriceRef: 60 },
-      { sessions: 10, price: 400, basePriceRef: 60 },
+      { sessions: 10, price: 480, basePriceRef: 60 },
     ]
   },
   {
@@ -125,7 +125,7 @@ const PRICING_DATA: Treatment[] = [
     options: [
       { sessions: 1, price: 60, label: "Sesión Individual - Abdomen" },
       { sessions: 5, price: 250, label: "Bono de 5 sesiones en abdomen", basePriceRef: 60 },
-      { sessions: 5, price: 400, label: "Glúteos + Muslos" },
+      { sessions: 5, price: 480, label: "Glúteos + Muslos" },
     ]
   }
 ];
