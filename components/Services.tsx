@@ -89,7 +89,7 @@ const SERVICES_DATA: Service[] = [
     title: "Sistema Superinductivo SIS",
     description: "Campo electromagnético de alta intensidad (BTL) que actúa sobre nervios y músculos sin contacto y sobre la ropa. Lo integramos en tu rehabilitación para aliviar el dolor y recuperar movilidad.",
     image: "/images/service-10.webp",
-    price: "Incluido en sesiones y bonos",
+    price: "Desde 40 €",
     highlights: ["Alivio del dolor", "Movilización articular", "Miostimulación", "Espasticidad"]
   }
 ];

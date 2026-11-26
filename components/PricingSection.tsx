@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell, Brain, Wind } from 'lucide-react';
+import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell, Brain, Wind, Magnet } from 'lucide-react';
 
 // Definición de tipos para los datos
 type CategoryId = 'fisio' | 'neuro' | 'diatermia' | 'especializadas';
@@ -98,6 +98,16 @@ const PRICING_DATA: Treatment[] = [
     description: "Técnica invasiva para el tratamiento del dolor miofascial.",
     category: 'especializadas',
     icon: <Target className="w-6 h-6" />,
+    options: [
+      { sessions: 1, price: 40 }
+    ]
+  },
+  {
+    id: 'sis',
+    title: "Sistema Superinductivo SIS",
+    description: "Campo electromagnético de alta intensidad (BTL) para aliviar el dolor y recuperar movilidad, sin contacto y sobre la ropa.",
+    category: 'especializadas',
+    icon: <Magnet className="w-6 h-6" />,
     options: [
       { sessions: 1, price: 40 }
     ]
