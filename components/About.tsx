@@ -1,11 +1,11 @@
 import React from 'react';
-import { Users, BookOpen, Stethoscope, ClipboardList } from 'lucide-react';
+import { Users, BookOpen, Stethoscope, ClipboardList, Zap, Magnet, Wind, Activity, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
     <section id="sobre-nosotros" className="py-20 bg-brand-beige/95 relative">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-16 items-start lg:items-stretch">
           
           {/* Left Side: Text + List */}
           <div className="lg:w-1/2 w-full">
@@ -38,10 +38,24 @@ export const About: React.FC = () => {
               </div>
             </div>
 
+            <figure className="mt-8">
+              <img
+                src="/images/equipo.webp"
+                alt="Equipo de Elisa Morilla Fisioterapia en la clínica de Chiclana"
+                width={960}
+                height={720}
+                loading="lazy"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-sm border border-white/50"
+              />
+              <figcaption className="text-xs text-gray-500 mt-3 text-center">
+                Nuestro equipo, cerca de ti en cada sesión.
+              </figcaption>
+            </figure>
+
           </div>
 
           {/* Right Side: Grid Features + Profile */}
-          <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-[auto_auto_1fr] gap-4">
             
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-white/50">
               <Users className="w-8 h-8 text-brand-accent mb-3" />
@@ -70,6 +84,60 @@ export const About: React.FC = () => {
                </div>
                {/* Decoration */}
                <div className="absolute right-0 bottom-0 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+            </div>
+
+            {/* Eslogan + lo que ofrece la clínica (ocupa el alto que queda junto a la foto del equipo) */}
+            <div className="sm:col-span-2 bg-white rounded-2xl p-8 shadow-sm border border-white/50 flex flex-col relative overflow-hidden">
+              <div className="absolute -top-16 -right-16 w-48 h-48 bg-brand-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+
+              <div className="flex-1 flex flex-col justify-center relative">
+              <span className="text-brand-primary text-xs font-bold uppercase tracking-widest mb-3">
+                Fisioterapia en Chiclana
+              </span>
+              <p className="text-2xl md:text-3xl font-bold text-brand-secondary leading-snug mb-4">
+                Manos expertas y la tecnología que tu recuperación necesita.
+              </p>
+              <p className="text-sm lg:text-base text-brand-text leading-relaxed mb-6">
+                Cada sesión empieza escuchándote. Combinamos el trabajo manual con aparatología avanzada para tratar el dolor, recuperar la movilidad y que vuelvas a tu día a día cuanto antes.
+              </p>
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                {[
+                  { icon: Zap, label: 'Tecarterapia Winback' },
+                  { icon: Magnet, label: 'Sistema Superinductivo SIS' },
+                  { icon: Wind, label: 'Presoterapia Bootech' },
+                  { icon: Activity, label: 'Técnicas ecoguiadas' },
+                ].map(({ icon: Icon, label }) => (
+                  <li key={label} className="flex items-center gap-3 text-sm font-medium text-brand-secondary">
+                    <span className="bg-brand-bg p-2 rounded-lg text-brand-primary shrink-0">
+                      <Icon size={16} />
+                    </span>
+                    {label}
+                  </li>
+                ))}
+              </ul>
+              </div>
+
+              <div className="mb-6 flex items-center gap-3 rounded-xl bg-brand-bg border border-brand-primary/20 px-4 py-3 relative">
+                <CheckCircle2 size={18} className="text-brand-primary shrink-0" />
+                <span className="text-sm text-brand-secondary">
+                  <strong className="font-semibold">Primera valoración gratuita</strong> en todos los tratamientos.
+                </span>
+              </div>
+
+              <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative">
+                <span className="flex items-center gap-2 text-xs text-gray-500">
+                  <MapPin size={14} className="text-brand-primary shrink-0" />
+                  C.C. Las Redes · Chiclana de la Frontera
+                </span>
+                <button
+                  onClick={() => document.getElementById('contacto-seccion')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#849171]"
+                >
+                  Pedir cita
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
             </div>
 
           </div>

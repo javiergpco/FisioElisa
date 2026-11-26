@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell, Brain } from 'lucide-react';
+import { Check, MessageCircle, Sparkles, Activity, User, Zap, Target, Dumbbell, Brain, Wind } from 'lucide-react';
 
 // Definición de tipos para los datos
 type CategoryId = 'fisio' | 'neuro' | 'diatermia' | 'especializadas';
@@ -27,7 +27,7 @@ const PRICING_DATA: Treatment[] = [
   {
     id: 'fisio-general',
     title: "Fisioterapia Avanzada",
-    description: "Terapia manual combinada con tecnología según necesidad.",
+    description: "Terapia manual combinada con tecnología (Winback, Sistema Superinductivo SIS) según necesidad.",
     category: 'fisio',
     icon: <Activity className="w-6 h-6" />,
     popular: true,
@@ -42,7 +42,7 @@ const PRICING_DATA: Treatment[] = [
   {
     id: 'neuro',
     title: "Rehabilitación Neurológica",
-    description: "Tratamiento especializado para patologías del sistema nervioso.",
+    description: "Tratamiento especializado para patologías del sistema nervioso. Incluye el Sistema Superinductivo SIS cuando lo necesitas.",
     category: 'neuro',
     icon: <User className="w-6 h-6" />,
     options: [
@@ -100,6 +100,17 @@ const PRICING_DATA: Treatment[] = [
     icon: <Target className="w-6 h-6" />,
     options: [
       { sessions: 1, price: 40 }
+    ]
+  },
+  {
+    id: 'presoterapia',
+    title: "Presoterapia (Bootech)",
+    description: "Botas de 8 cámaras para linfedema, lipedema, drenaje linfático, celulitis y descarga de piernas.",
+    category: 'especializadas',
+    icon: <Wind className="w-6 h-6" />,
+    options: [
+      { sessions: 1, price: 20 },
+      { sessions: 5, price: 90, basePriceRef: 20 },
     ]
   },
 

@@ -7,21 +7,29 @@ import {
   Zap,
   Activity,
   Award,
-  Stethoscope
+  Stethoscope,
+  Magnet,
+  Wind
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // --- IMÁGENES DEL CARRUSEL ---
+// `position` es el encuadre (object-position) de cada foto: las verticales
+// se recortan en pantallas anchas y hay que elegir qué franja se ve.
 const HERO_IMAGES = [
-  "/images/hero-slide-1.webp",
-  "/images/hero-slide-2.webp",
-  "/images/hero-slide-3.webp",
-  "/images/hero-slide-4.webp"
+  { src: "/images/hero-slide-6.webp", position: "center 50%" },
+  { src: "/images/hero-slide-7.webp", position: "center 80%" }, // paciente con el masajeador, abajo en la foto
+  { src: "/images/hero-slide-1.webp", position: "center 50%" },
+  { src: "/images/hero-slide-2.webp", position: "center 50%" },
+  { src: "/images/hero-slide-3.webp", position: "center 50%" },
+  { src: "/images/hero-slide-4.webp", position: "center 50%" },
 ];
 
 // --- MOCK BRANDS (Technologies & Insurers) ---
 const PARTNERS = [
   { name: "Winback", icon: Zap },
+  { name: "BTL SIS", icon: Magnet },
+  { name: "Bootech", icon: Wind },
   { name: "Ecografía", icon: Activity },
   { name: "Colegiados", icon: Award },
   { name: "Terapia Manual", icon: Stethoscope },
@@ -76,7 +84,8 @@ export const Hero: React.FC = () => {
         <AnimatePresence mode="popLayout">
           <motion.img
             key={currentImageIndex}
-            src={HERO_IMAGES[currentImageIndex]}
+            src={HERO_IMAGES[currentImageIndex].src}
+            style={{ objectPosition: HERO_IMAGES[currentImageIndex].position }}
             alt="Fondo Clínica FisioElisa"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

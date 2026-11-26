@@ -9,6 +9,8 @@ import {
   Activity, 
   Brain,
   Stethoscope,
+  Magnet,
+  Wind,
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
@@ -54,6 +56,18 @@ const TECHNOLOGIES = [
     desc: "Reset del sistema nervioso y control avanzado del dolor.",
     icon: <Brain className="w-8 h-8 text-brand-secondary" />,
     bg: "bg-brand-secondary/10"
+  },
+  {
+    title: "Sistema Superinductivo SIS (BTL)",
+    desc: "Campo electromagnético de alta intensidad que actúa sobre nervios y músculos sin contacto y sobre la ropa. Alivia el dolor, moviliza articulaciones y estimula el músculo.",
+    icon: <Magnet className="w-8 h-8 text-brand-primary" />,
+    bg: "bg-brand-primary/10"
+  },
+  {
+    title: "Presoterapia Bootech",
+    desc: "Botas de 8 cámaras de aire con presión ajustable por zonas. Indicada en linfedema, lipedema, drenaje linfático, celulitis y descarga de piernas tras el deporte.",
+    icon: <Wind className="w-8 h-8 text-brand-accent" />,
+    bg: "bg-brand-accent/10"
   }
 ];
 

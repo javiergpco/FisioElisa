@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/fisioelisa_/';
 import { Button } from './Button';
 
 // Definimos la interfaz de las props para recibir la función de navegación
@@ -56,6 +58,10 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
   const textColorClass = showSolid ? 'text-brand-text' : 'text-white';
   const hoverColorClass = showSolid ? 'hover:text-brand-primary' : 'hover:text-brand-accent';
   const logoFilterClass = showSolid ? '' : 'brightness-0 invert';
+  // Botón de Instagram: contorno blanco sobre la portada, color de marca con fondo sólido
+  const instagramClass = showSolid
+    ? 'border-brand-primary/40 text-brand-secondary hover:bg-brand-primary hover:text-white hover:border-brand-primary'
+    : 'border-white/40 text-white hover:bg-white/15 hover:border-white';
   const bgClass = showSolid 
     ? 'bg-brand-bg/95 backdrop-blur-sm shadow-md py-1.5 md:py-1' 
     : 'bg-transparent py-5';
@@ -93,6 +99,16 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
                 {link.name}
               </button>
             ))}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de FisioElisa (se abre en una pestaña nueva)"
+              className={`inline-flex items-center gap-2 rounded-full border py-2 px-4 text-sm font-medium transition-colors ${instagramClass}`}
+            >
+              <Instagram size={16} />
+              Instagram
+            </a>
             <Button 
               variant="primary" 
               className="py-2 px-5 text-sm"
@@ -102,13 +118,26 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
             </Button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className={`md:hidden p-2 transition-colors ${textColorClass}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Instagram (fuera del desplegable) + hamburguesa */}
+          <div className="md:hidden flex items-center gap-2">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de FisioElisa (se abre en una pestaña nueva)"
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${instagramClass}`}
+            >
+              <Instagram size={20} />
+            </a>
+            <button 
+              className={`p-2 transition-colors ${textColorClass}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
